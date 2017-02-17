@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  #banner.page-header
+     .row
+         .col-lg-6
+             h1 Make & Model
+                 small &nbsp;Pick a make & model to see details
+  .row
+     .col-xs-12.col-sm-8
+       .row.list-group
+          .col-xs-12.list-group-item
+             h4 Pick a Car Manufacturer
+             .row
+                .col-xs-6.col-sm-4
+                    select#groups
+                      option(value='Ford') Ford
+                      option(value='Acura') Acura
+
+
+                .col-xs-6.col-sm-4
+                    select#sub_groups
+                      option(data-group='Choose', value='0') -- Select --
+                      option(data-group='Ford', value='Edge') Edge
+                      option(data-group='Ford', value='Escape') Escape
+                      option(data-group='Acura', value='ILX') ILX
+                      option(data-group='Acura', value='MDX') MDX
+
+
+     .col-xs-12.col-sm-4
+       p.lead Car Make & Model helps you select a car model from a list of manufacturers, and then shows you the details about the car.  
+       a(href="/makers") Car Model Information              
